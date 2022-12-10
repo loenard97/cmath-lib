@@ -23,7 +23,7 @@ double pi(unsigned int n) {
 double e_alt(unsigned int n)
 {
     double t = 1 + 1/n;
-    return power(&t, n);
+    return power(t, n);
 }
 
 double e(unsigned int n)
