@@ -1,3 +1,6 @@
+#ifndef VEC3D_H
+#define VEC3D_H
+
 typedef struct vec3D Vec3D;
 
 void printVec3D(Vec3D* vec1);
@@ -8,3 +11,5 @@ void add(Vec3D* vec1, Vec3D* vec2);
 void sub(Vec3D* vec1, Vec3D* vec2);
 void sprod(Vec3D* vec1, Vec3D* vec2);
 void cprod(Vec3D* vec1, Vec3D* vec2);
+
+#endif

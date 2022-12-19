@@ -1,6 +1,6 @@
 double PI;
 
-double pi(unsigned int n);
+double pi_approx(unsigned int n);
 
 unsigned long fac_alt(unsigned long n);
 unsigned long fac(unsigned long n);

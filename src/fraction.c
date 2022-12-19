@@ -1,8 +1,7 @@
 #include "fraction.h"
 
 
-typedef struct fraction
-{
+typedef struct fraction {
     int a;
     int b;
 } Fraction;

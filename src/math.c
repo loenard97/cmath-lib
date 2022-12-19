@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 
-double pi(unsigned int n) {
+double pi_approx(unsigned int n) {
     // Gauss-Legendre
     double a = 1;
     double a_n = 1;
@@ -10,7 +10,7 @@ double pi(unsigned int n) {
     double t = 0.25;
     double p = 1;
 
-    for (int i=0; i<n; i++) {
+    for (unsigned int i=0; i<n; i++) {
         a_n = 0.5*(a+b);
         b = a*b; b = sqroot(&b, 10);
         t = t - p*(a-a_n)*(a-a_n);
@@ -28,11 +28,8 @@ unsigned long fac_alt(unsigned long n) {
 
 unsigned long fac(unsigned long n) {
     unsigned long int y = 1;
-
-    for (int i=1; i<=n; i++)
-    {
+    for (unsigned int i=1; i<=n; i++)
         y *= i;
-    }
     return y;
 }
 
@@ -50,7 +47,7 @@ double sqroot(double* x, unsigned int n) {
     // f'(x) = 2*y
     double y = 1.0;
 
-    for (int i=0; i<n; i++)
+    for (unsigned int i=0; i<n; i++)
         y = y - (y*y - *x) / (2*y);
     return y;
 }
@@ -75,7 +72,7 @@ double sine(double x, unsigned int n)
 
     while (x > pi2)
         x -= pi2;
-    for (int i=1; i<n; i+=2)
+    for (unsigned int i=1; i<n; i+=2)
         y += power(-1.0, i/2) / fac(i) * power(x, i);
     return y;
 }
@@ -87,7 +84,7 @@ double cosine(double x, unsigned int n)
 
     while (x > pi2)
         x -= pi2;
-    for (int i=2; i<n; i+=2)
+    for (unsigned int i=2; i<n; i+=2)
         y += power(-1.0, i/2) / fac(i) * power(x, i);
     return y;
 }
